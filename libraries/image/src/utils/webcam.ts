@@ -36,6 +36,7 @@ export class Webcam  {
     public height: number;
     public webcam: HTMLVideoElement;
     public canvas: HTMLCanvasElement;
+    public canvas2: HTMLVideoElement;
 
     constructor(width = 400, height = 400, flip = false) {
         this.width = width;
@@ -49,6 +50,10 @@ export class Webcam  {
             return Promise.reject('Your browser does not support WebRTC. Please try another one.');
         }
     
+        if(window.navigator.mediaDevices){
+            
+            return 
+        }
         options.width = 640;
         const videoOptions = fillConstraints(options);
 
