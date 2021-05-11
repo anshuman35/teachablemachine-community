@@ -29,6 +29,7 @@ export function capture(rasterElement: HTMLImageElement | HTMLVideoElement | HTM
 
         // crop the image so we're using the center square
         const cropped = cropTensor(pixels, grayscale);
+        const cr2 = cropTensor(pixels, image_object);
 
         // Expand the outer most dimension so we have a batch size of 1
         const batchedImage = cropped.expandDims(0);
