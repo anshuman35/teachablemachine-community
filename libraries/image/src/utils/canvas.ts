@@ -23,8 +23,10 @@ export function resize(image: Drawable, scale: number, canvas: HTMLCanvasElement
     canvas.width = image.width * scale;
     canvas.height = image.height * scale;
     const ctx: CanvasRenderingContext2D = canvas.getContext('2d')!;
+    const xdt: Canvasvg = canvas.getContext('3d');
 
     ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    xdt.drawImage(image, 1, 1);
     return canvas;
 }
 
