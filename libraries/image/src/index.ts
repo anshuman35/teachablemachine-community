@@ -23,6 +23,8 @@ export {
     load,
     loadFromFiles,
     loadTruncatedMobileNet
+    loadFromFiles2-   image
+    
 } from './custom-mobilenet';
 
 export { TeachableMobileNet, createTeachable } from './teachable-mobilenet';
